@@ -1,0 +1,16 @@
+E:\Git Directories\First\Labs_Nubip_OBD\Lab7\bin\Debug\Lab7.exe.config
+E:\Git Directories\First\Labs_Nubip_OBD\Lab7\bin\Debug\Lab7.exe
+E:\Git Directories\First\Labs_Nubip_OBD\Lab7\bin\Debug\Lab7.pdb
+E:\Git Directories\First\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.csproj.AssemblyReference.cache
+E:\Git Directories\First\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.Form1.resources
+E:\Git Directories\First\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.Properties.Resources.resources
+E:\Git Directories\First\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.csproj.GenerateResource.cache
+E:\Git Directories\First\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.csproj.CoreCompileInputs.cache
+E:\Git Directories\First\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.exe
+E:\Git Directories\First\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.pdb
+E:\Git Directories\First\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.Form2.resources
+E:\Git Directories\First\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.Form_ListOfAvailableServices.resources
+E:\Git Directories\First\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.Form_EditService.resources
+E:\Git Directories\First\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.Form_ListOfClients.resources
+E:\Git Directories\First\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.Form_ListOfOrders.resources
+E:\Git Directories\First\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.Form_ListOfFinancialReports.resources
