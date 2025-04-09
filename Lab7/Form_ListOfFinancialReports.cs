@@ -16,11 +16,10 @@ namespace Lab7
         {
             InitializeComponent();
         }
-        private void Form_ListOfFinancialReports_Load(object sender, EventArgs e)
-        {
-            // Логіка для завантаження фінансових звітів (наприклад, з бази даних чи списку)
-            LoadFinancialReports();
-        }
+        //private void Form_ListOfFinancialReports_Load(object sender, EventArgs e)
+        //{
+            
+        //}
         private void LoadFinancialReports()
         {
             // Це місце для коду, який завантажує список фінансових звітів у DataGridView
@@ -49,7 +48,8 @@ namespace Lab7
 
         private void Form_ListOfFinancialReports_Load_1(object sender, EventArgs e)
         {
-
+            // Логіка для завантаження фінансових звітів (наприклад, з бази даних чи списку)
+            LoadFinancialReports();
         }
 
         private void AddReportButton_Click(object sender, EventArgs e)

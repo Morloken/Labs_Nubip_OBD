@@ -14,3 +14,19 @@ E:\Git Directories\First\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.Form_EditService.res
 E:\Git Directories\First\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.Form_ListOfClients.resources
 E:\Git Directories\First\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.Form_ListOfOrders.resources
 E:\Git Directories\First\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.Form_ListOfFinancialReports.resources
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\bin\Debug\Lab7.exe.config
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\bin\Debug\Lab7.exe
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\bin\Debug\Lab7.pdb
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.csproj.AssemblyReference.cache
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.Form1.resources
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.Form2.resources
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.Form_EditService.resources
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.Form_ListOfAvailableServices.resources
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.Form_ListOfClients.resources
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.Form_ListOfFinancialReports.resources
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.Form_ListOfOrders.resources
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.Properties.Resources.resources
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.csproj.GenerateResource.cache
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.csproj.CoreCompileInputs.cache
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.exe
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.pdb
