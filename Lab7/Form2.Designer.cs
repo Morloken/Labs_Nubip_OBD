@@ -77,7 +77,7 @@
             this.фінансиToolStripMenuItem});
             this.MainMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MainMenuStrip.Name = "MainMenuStrip";
-            this.MainMenuStrip.Size = new System.Drawing.Size(1067, 30);
+            this.MainMenuStrip.Size = new System.Drawing.Size(1067, 28);
             this.MainMenuStrip.TabIndex = 1;
             this.MainMenuStrip.Text = "menuStrip1";
             // 
