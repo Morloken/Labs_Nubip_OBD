@@ -10,6 +10,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
+using System.Data.SqlClient;
+using System.Security.Cryptography;
+
+
 namespace Lab7
 {
     public partial class Form1 : Form
@@ -20,14 +24,28 @@ namespace Lab7
             InitializeComponent();
             SetPlaceholder();
             form1Instance = this;
-            //прибрати кнопку розкриття вікна на весь екран
             this.MaximizeBox = false;
         }
+
+        public class DbConfig
+        {
+            public string Server { get; set; }
+            public string Database { get; set; }
+        }
+
+        // Метод для отримання Server і Database з файлу JSON
+        public static DbConfig GetDbConfig()
+        {
+            string json = File.ReadAllText("dbconfig.json");
+            DbConfig config = Newtonsoft.Json.JsonConvert.DeserializeObject<DbConfig>(json);
+            return config;
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
-
         }
+
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
@@ -37,10 +55,9 @@ namespace Lab7
         {
 
         }
-           
+
         private void SetPlaceholder()
         {
-            //NameTextBox
             NameTextBox.ForeColor = Color.Gray;
             NameTextBox.Text = "Введіть ім'я...";
 
@@ -61,9 +78,6 @@ namespace Lab7
                     NameTextBox.ForeColor = Color.Gray;
                 }
             };
-
-
-            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -76,25 +90,57 @@ namespace Lab7
 
         }
 
-        
-
-
         private void PasswordTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
 
+        // Метод для авторизації через SQL логін
+        public static bool AuthenticateUser(string login, string password)
+        {
+            try
+            {
+                // Отримуємо Server і Database з JSON
+                DbConfig config = GetDbConfig();
+
+                // Формуємо рядок підключення з введеним логіном і паролем користувача
+                string connectionString = $"Server={config.Server};Database={config.Database};User Id={login};Password={password};";
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    // Якщо відкрив — авторизація успішна
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Помилка підключення: {ex.Message}", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
         private void LoginButton_Click(object sender, EventArgs e)
         {
+            string login = NameTextBox.Text.Trim();
+            string password = PasswordTextBox.Text.Trim();
 
-            // Створюємо екземпляр Form2
-            Form2 form2 = new Form2();
+            bool isAuthenticated = AuthenticateUser(login, password);
 
-            // Відкриваємо Form2
-            Form2.form2Instance.Show();
+            if (isAuthenticated)
+            {
+                MessageBox.Show($"Вітаю, {login}! Ви успішно підключені до бази.");
 
-            // Приховуємо Form1, щоб вона залишалася в пам'яті
-            this.Hide();
+                // Відкриваємо Form2
+                Form2 form2 = new Form2();
+                form2.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Невірний логін або пароль.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

@@ -30,3 +30,7 @@ C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.csproj.G
 C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.csproj.CoreCompileInputs.cache
 C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.exe
 C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.pdb
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\bin\Debug\Newtonsoft.Json.xml
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.csproj.Up2Date
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.csproj.Fody.CopyLocal.cache
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.csproj.Fody.RuntimeCopyLocal.cache

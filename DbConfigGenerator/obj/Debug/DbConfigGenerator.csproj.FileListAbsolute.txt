@@ -1,0 +1,13 @@
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\DbConfigGenerator\bin\Debug\DbConfigGenerator.exe.config
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\DbConfigGenerator\bin\Debug\DbConfigGenerator.exe
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\DbConfigGenerator\bin\Debug\DbConfigGenerator.pdb
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\DbConfigGenerator\bin\Debug\Newtonsoft.Json.dll
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\DbConfigGenerator\bin\Debug\Newtonsoft.Json.xml
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\DbConfigGenerator\obj\Debug\DbConfigGenerator.csproj.AssemblyReference.cache
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\DbConfigGenerator\obj\Debug\DbConfigGenerator.Form1.resources
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\DbConfigGenerator\obj\Debug\DbConfigGenerator.Properties.Resources.resources
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\DbConfigGenerator\obj\Debug\DbConfigGenerator.csproj.GenerateResource.cache
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\DbConfigGenerator\obj\Debug\DbConfigGenerator.csproj.CoreCompileInputs.cache
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\DbConfigGenerator\obj\Debug\DbConfig.64FD58AF.Up2Date
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\DbConfigGenerator\obj\Debug\DbConfigGenerator.exe
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\DbConfigGenerator\obj\Debug\DbConfigGenerator.pdb
