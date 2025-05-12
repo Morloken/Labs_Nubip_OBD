@@ -39,16 +39,13 @@
             this.списокКлієнтівToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.замовленняToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.списокЗамовленьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.завершеніЗамовленняToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.фінансиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.списокФінансовихЗвітівToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оплатаЗаПослугиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MainMenuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +56,7 @@
             this.CloseFormButton.FlatAppearance.BorderSize = 0;
             this.CloseFormButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CloseFormButton.Location = new System.Drawing.Point(1023, 0);
-            this.CloseFormButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CloseFormButton.Margin = new System.Windows.Forms.Padding(4);
             this.CloseFormButton.Name = "CloseFormButton";
             this.CloseFormButton.Size = new System.Drawing.Size(44, 43);
             this.CloseFormButton.TabIndex = 0;
@@ -130,8 +127,7 @@
             // замовленняToolStripMenuItem
             // 
             this.замовленняToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.списокЗамовленьToolStripMenuItem,
-            this.завершеніЗамовленняToolStripMenuItem});
+            this.списокЗамовленьToolStripMenuItem});
             this.замовленняToolStripMenuItem.Name = "замовленняToolStripMenuItem";
             this.замовленняToolStripMenuItem.Size = new System.Drawing.Size(109, 24);
             this.замовленняToolStripMenuItem.Text = "Замовлення";
@@ -139,15 +135,9 @@
             // списокЗамовленьToolStripMenuItem
             // 
             this.списокЗамовленьToolStripMenuItem.Name = "списокЗамовленьToolStripMenuItem";
-            this.списокЗамовленьToolStripMenuItem.Size = new System.Drawing.Size(255, 26);
+            this.списокЗамовленьToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.списокЗамовленьToolStripMenuItem.Text = "Список замовлень";
             this.списокЗамовленьToolStripMenuItem.Click += new System.EventHandler(this.списокЗамовленьToolStripMenuItem_Click);
-            // 
-            // завершеніЗамовленняToolStripMenuItem
-            // 
-            this.завершеніЗамовленняToolStripMenuItem.Name = "завершеніЗамовленняToolStripMenuItem";
-            this.завершеніЗамовленняToolStripMenuItem.Size = new System.Drawing.Size(255, 26);
-            this.завершеніЗамовленняToolStripMenuItem.Text = "Завершені замовлення";
             // 
             // фінансиToolStripMenuItem
             // 
@@ -178,24 +168,19 @@
             this.monthCalendar1.ShowWeekNumbers = true;
             this.monthCalendar1.TabIndex = 2;
             // 
-            // splitContainer1
+            // progressBar1
             // 
-            this.splitContainer1.Location = new System.Drawing.Point(12, 31);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
-            this.splitContainer1.Size = new System.Drawing.Size(499, 505);
-            this.splitContainer1.SplitterDistance = 166;
-            this.splitContainer1.TabIndex = 3;
+            this.progressBar1.Location = new System.Drawing.Point(717, 0);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(41, 554);
+            this.progressBar1.TabIndex = 5;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(510, 31);
+            this.pictureBox1.Location = new System.Drawing.Point(777, 71);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(557, 246);
+            this.pictureBox1.Size = new System.Drawing.Size(278, 246);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
@@ -205,19 +190,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.ControlBox = false;
-            this.Controls.Add(this.splitContainer1);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.CloseFormButton);
             this.Controls.Add(this.MainMenuStrip);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form2";
             this.Text = "АРМ директора комп\'ютерного сервісного центру";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.MainMenuStrip.ResumeLayout(false);
             this.MainMenuStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -236,12 +219,11 @@
         private System.Windows.Forms.ToolStripMenuItem списокКлієнтівToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem замовленняToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem списокЗамовленьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem завершеніЗамовленняToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem фінансиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem списокФінансовихЗвітівToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem оплатаЗаПослугиToolStripMenuItem;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }

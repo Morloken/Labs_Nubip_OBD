@@ -94,7 +94,8 @@ namespace Lab7
         {
 
         }
-
+        public static string CurrentLogin { get; private set; }
+        public static string CurrentPassword { get; private set; }
         // Метод для авторизації через SQL логін
         public static bool AuthenticateUser(string login, string password)
         {
@@ -131,7 +132,9 @@ namespace Lab7
             if (isAuthenticated)
             {
                 MessageBox.Show($"Вітаю, {login}! Ви успішно підключені до бази.");
-
+                // Зберігаємо для подальших форм
+                CurrentLogin = login;
+                CurrentPassword = password;
                 // Відкриваємо Form2
                 Form2 form2 = new Form2();
                 form2.Show();
@@ -142,6 +145,9 @@ namespace Lab7
                 MessageBox.Show("Невірний логін або пароль.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+       
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
