@@ -126,5 +126,10 @@ namespace Lab7
 
 
         }
+
+        private void фінансиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
