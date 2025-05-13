@@ -1,4 +1,5 @@
 ﻿
+using Lab7;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Lab7.Form_ListOfOrders;
 
 namespace Lab7
 {
@@ -22,6 +24,16 @@ namespace Lab7
         {
             InitializeComponent();
             LoadOrders();
+            //заміна заголовків стовпців
+            dataGridView1.Columns[0].HeaderText = "Ідентифікатор замовлення";
+            dataGridView1.Columns[1].HeaderText = "Ідентифікатор клієнта";
+            dataGridView1.Columns[2].HeaderText = "ПІБ клієнта";
+            dataGridView1.Columns[3].HeaderText = "Ідентифікатор послуги";
+            dataGridView1.Columns[4].HeaderText = "Назва послуги";
+            dataGridView1.Columns[5].HeaderText = "Ідентифікатор працівника";
+            dataGridView1.Columns[6].HeaderText = "ПІБ працівника";
+            dataGridView1.Columns[7].HeaderText = "Дата замовлення";
+            dataGridView1.Columns[8].HeaderText = "Статус замовлення";
         }
         private void CloseButton_ListOfOrders_Click(object sender, EventArgs e)
         {
@@ -176,47 +188,69 @@ namespace Lab7
             AddOrder(clientId, employeeId, orderStatus);
         }
 
+       
         private void AddOrder(string clientId, string employeeId, string orderStatus)
         {
-            try
-            {
-                var config = Form1.GetDbConfig();
-                string connectionString = $"Server={config.Server};Database={config.Database};User Id={Form1.CurrentLogin};Password={Form1.CurrentPassword};";
+        try
+        {
+        var config = Form1.GetDbConfig();
+        string connectionString = $"Server={config.Server};Database={config.Database};User Id={Form1.CurrentLogin};Password={Form1.CurrentPassword};";
 
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
+        // Генеруємо ідентифікатори
+        string orderId = Guid.NewGuid().ToString();          // для OrderTable
+        string orderDetailId = Guid.NewGuid().ToString();    // для OrderDetails
 
-                    using (SqlCommand command = new SqlCommand("dbo.AddNewOrder", connection))
-                    {
-                        command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.AddWithValue("@OrderID", Guid.NewGuid().ToString());
-                        command.Parameters.AddWithValue("@ClientID", clientId);
-                        if (comboBoxServices.SelectedItem == null)
-                        {
-                            MessageBox.Show("Виберіть сервіс для замовлення.");
-                            return;
-                        }
-
-                        string serviceId = ((Service)comboBoxServices.SelectedItem).ServiceID;
-                        command.Parameters.AddWithValue("@ServiceID", serviceId);
-
-                        command.Parameters.AddWithValue("@EmployeeID", employeeId);
-                        command.Parameters.AddWithValue("@OrderStatus", orderStatus);
-                        command.Parameters.AddWithValue("@OrderDate", DateTime.Now.Date); // Встановлюємо поточну дату
-
-                        command.ExecuteNonQuery();
-                    }
-                }
-
-                MessageBox.Show("Замовлення успішно додано!");
-                LoadOrders();  // Оновлюємо список замовлень після додавання
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Помилка при додаванні замовлення: {ex.Message}");
-            }
+        if (comboBoxServices.SelectedItem == null)
+        {
+            MessageBox.Show("Виберіть сервіс для замовлення.");
+            return;
         }
+
+        string serviceId = ((Service)comboBoxServices.SelectedItem).ServiceID;
+
+        using (SqlConnection connection = new SqlConnection(connectionString))
+        {
+            connection.Open();
+
+            // Додаємо основне замовлення
+            using (SqlCommand command = new SqlCommand("dbo.AddNewOrder", connection))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@OrderID", orderId);
+                command.Parameters.AddWithValue("@ClientID", clientId);
+                command.Parameters.AddWithValue("@ServiceID", serviceId);
+                command.Parameters.AddWithValue("@EmployeeID", employeeId);
+                command.Parameters.AddWithValue("@OrderStatus", orderStatus);
+                command.Parameters.AddWithValue("@OrderDate", DateTime.Now.Date);
+
+                command.ExecuteNonQuery();
+            }
+
+// Додаємо деталі замовлення
+using (SqlCommand cmd = new SqlCommand("dbo.AddOrderDetails", connection))
+{
+                      
+
+                       
+                        cmd.CommandType = CommandType.StoredProcedure;
+    cmd.Parameters.AddWithValue("@OrderDetailID", orderDetailId);
+    cmd.Parameters.AddWithValue("@ServiceID", serviceId);
+    cmd.Parameters.AddWithValue("@EmployeeID", employeeId);
+                        decimal fakeTotalPrice = 11; 
+                        cmd.Parameters.AddWithValue("@OrderDetailTotalPrice", fakeTotalPrice); 
+    cmd.ExecuteNonQuery();
+}
+        }
+
+        MessageBox.Show("Замовлення успішно додано!");
+LoadOrders(); // Оновлюємо список замовлень після додавання
+    }
+    catch (Exception ex)
+    {
+        MessageBox.Show($"Помилка при додаванні замовлення: {ex.Message}");
+    }
+}
+
 
 
 
@@ -289,7 +323,8 @@ namespace Lab7
                 txtOrderStatus.Clear();
             }
         }
-        private void SaveEditedOrder(string orderId, string clientId, string employeeId, string serviceId, string orderStatus)
+        
+        private void SaveEditedOrder(string orderId, string clientId, string employeeId, string serviceId, string newOrderStatus)
         {
             try
             {
@@ -300,6 +335,17 @@ namespace Lab7
                 {
                     connection.Open();
 
+                    // Спочатку отримаємо старий статус
+                    string oldStatus = "";
+                    using (SqlCommand getStatusCmd = new SqlCommand("SELECT OrderStatus FROM OrderTable WHERE OrderID = @OrderID", connection))
+                    {
+                        getStatusCmd.Parameters.AddWithValue("@OrderID", orderId);
+                        object result = getStatusCmd.ExecuteScalar();
+                        if (result != null)
+                            oldStatus = result.ToString();
+                    }
+
+                    // Оновлюємо решту полів (існуюча процедура)
                     using (SqlCommand command = new SqlCommand("dbo.UpdateOrder", connection))
                     {
                         command.CommandType = CommandType.StoredProcedure;
@@ -308,9 +354,21 @@ namespace Lab7
                         command.Parameters.AddWithValue("@EmployeeID", employeeId);
                         command.Parameters.AddWithValue("@ServiceID", serviceId);
                         command.Parameters.AddWithValue("@OrderDate", DateTime.Now);
-                        command.Parameters.AddWithValue("@OrderStatus", orderStatus);
+                        command.Parameters.AddWithValue("@OrderStatus", newOrderStatus);
 
                         command.ExecuteNonQuery();
+                    }
+
+                    // Якщо статус змінився, викликаємо логування
+                    if (oldStatus != newOrderStatus)
+                    {
+                        using (SqlCommand logCommand = new SqlCommand("dbo.UpdateOrderStatusWithLog", connection))
+                        {
+                            logCommand.CommandType = CommandType.StoredProcedure;
+                            logCommand.Parameters.AddWithValue("@OrderID", orderId);
+                            logCommand.Parameters.AddWithValue("@NewStatus", newOrderStatus);
+                            logCommand.ExecuteNonQuery();
+                        }
                     }
                 }
 
@@ -322,6 +380,7 @@ namespace Lab7
                 MessageBox.Show($"Помилка при редагуванні замовлення: {ex.Message}");
             }
         }
+
 
         private void DeleteOrderButton_Click(object sender, EventArgs e)
         {

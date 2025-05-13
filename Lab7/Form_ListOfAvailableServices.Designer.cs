@@ -49,7 +49,7 @@
             // 
             // CloseFormButton_ListOfAvailableServices
             // 
-            this.CloseFormButton_ListOfAvailableServices.Location = new System.Drawing.Point(947, 1);
+            this.CloseFormButton_ListOfAvailableServices.Location = new System.Drawing.Point(977, 1);
             this.CloseFormButton_ListOfAvailableServices.Margin = new System.Windows.Forms.Padding(4);
             this.CloseFormButton_ListOfAvailableServices.Name = "CloseFormButton_ListOfAvailableServices";
             this.CloseFormButton_ListOfAvailableServices.Size = new System.Drawing.Size(119, 28);
@@ -61,11 +61,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(7, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(585, 530);
+            this.dataGridView1.Size = new System.Drawing.Size(660, 530);
             this.dataGridView1.TabIndex = 1;
             // 
             // editServiceButton
@@ -84,7 +84,7 @@
             this.flowLayoutPanel1.Controls.Add(this.editServiceButton);
             this.flowLayoutPanel1.Controls.Add(this.addServiceButton);
             this.flowLayoutPanel1.Controls.Add(this.deleteServiceButton);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(643, 35);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(673, 35);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(218, 103);
             this.flowLayoutPanel1.TabIndex = 3;
@@ -111,21 +111,21 @@
             // 
             // serviceNameTextBox
             // 
-            this.serviceNameTextBox.Location = new System.Drawing.Point(643, 176);
+            this.serviceNameTextBox.Location = new System.Drawing.Point(673, 176);
             this.serviceNameTextBox.Name = "serviceNameTextBox";
             this.serviceNameTextBox.Size = new System.Drawing.Size(218, 22);
             this.serviceNameTextBox.TabIndex = 5;
             // 
             // servicePriceTextBox
             // 
-            this.servicePriceTextBox.Location = new System.Drawing.Point(646, 251);
+            this.servicePriceTextBox.Location = new System.Drawing.Point(676, 251);
             this.servicePriceTextBox.Name = "servicePriceTextBox";
             this.servicePriceTextBox.Size = new System.Drawing.Size(213, 22);
             this.servicePriceTextBox.TabIndex = 6;
             // 
             // serviceDescriptionTextBox
             // 
-            this.serviceDescriptionTextBox.Location = new System.Drawing.Point(646, 417);
+            this.serviceDescriptionTextBox.Location = new System.Drawing.Point(676, 417);
             this.serviceDescriptionTextBox.Name = "serviceDescriptionTextBox";
             this.serviceDescriptionTextBox.Size = new System.Drawing.Size(213, 22);
             this.serviceDescriptionTextBox.TabIndex = 8;
@@ -133,7 +133,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(643, 154);
+            this.label1.Location = new System.Drawing.Point(673, 154);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 16);
             this.label1.TabIndex = 9;
@@ -142,7 +142,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(643, 232);
+            this.label2.Location = new System.Drawing.Point(673, 232);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 16);
             this.label2.TabIndex = 10;
@@ -151,7 +151,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(643, 316);
+            this.label3.Location = new System.Drawing.Point(673, 316);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(136, 16);
             this.label3.TabIndex = 11;
@@ -160,7 +160,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(643, 398);
+            this.label4.Location = new System.Drawing.Point(673, 398);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 16);
             this.label4.TabIndex = 12;
@@ -168,7 +168,7 @@
             // 
             // serviceDurationNumericUpDown
             // 
-            this.serviceDurationNumericUpDown.Location = new System.Drawing.Point(646, 347);
+            this.serviceDurationNumericUpDown.Location = new System.Drawing.Point(676, 347);
             this.serviceDurationNumericUpDown.Name = "serviceDurationNumericUpDown";
             this.serviceDurationNumericUpDown.Size = new System.Drawing.Size(213, 22);
             this.serviceDurationNumericUpDown.TabIndex = 13;
@@ -177,7 +177,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(1103, 554);
             this.ControlBox = false;
             this.Controls.Add(this.serviceDurationNumericUpDown);
             this.Controls.Add(this.label4);

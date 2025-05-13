@@ -24,6 +24,9 @@ namespace Lab7
         Form_ListOfOrders formListOfOrders = new Form_ListOfOrders();
         // Створюємо новий екземпляр Form_ListOfFinancialReports
         Form_ListOfFinancialReports formListOfFinancialReports = new Form_ListOfFinancialReports();
+        // Створюємо новий екземпляр Form_OrderHistorycs
+        Form_OrderHistorycs formOrderHistorycs = new Form_OrderHistorycs();
+       
         public Form2()
         {
             InitializeComponent();
@@ -111,6 +114,16 @@ namespace Lab7
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void історіяЗамовленьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Приховуємо поточну форму (Form2)
+            this.Hide();
+            // Відкриваємо нову форму (Form_ListOfOrders)
+            formOrderHistorycs.Show();
+
 
         }
     }
