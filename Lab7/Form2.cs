@@ -26,7 +26,9 @@ namespace Lab7
         Form_ListOfFinancialReports formListOfFinancialReports = new Form_ListOfFinancialReports();
         // Створюємо новий екземпляр Form_OrderHistorycs
         Form_OrderHistorycs formOrderHistorycs = new Form_OrderHistorycs();
-       
+        // Створюємо новий екземпляр Reports
+        Reports reports = new Reports();
+
         public Form2()
         {
             InitializeComponent();
@@ -130,6 +132,15 @@ namespace Lab7
         private void фінансиToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void формуванняЗвітівToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            // Приховуємо поточну форму (Form2)
+            this.Hide();
+           
+            reports.Show();
         }
     }
 }

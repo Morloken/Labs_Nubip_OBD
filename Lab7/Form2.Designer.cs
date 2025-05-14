@@ -40,11 +40,11 @@
             this.історіяЗамовленьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.фінансиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.списокФінансовихЗвітівToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.звітиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.формуванняЗвітівToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.звітиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.формуванняЗвітівToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -106,7 +106,7 @@
             // списокКлієнтівToolStripMenuItem
             // 
             this.списокКлієнтівToolStripMenuItem.Name = "списокКлієнтівToolStripMenuItem";
-            this.списокКлієнтівToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.списокКлієнтівToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
             this.списокКлієнтівToolStripMenuItem.Text = "Список клієнтів";
             this.списокКлієнтівToolStripMenuItem.Click += new System.EventHandler(this.списокКлієнтівToolStripMenuItem_Click);
             // 
@@ -122,14 +122,14 @@
             // списокЗамовленьToolStripMenuItem
             // 
             this.списокЗамовленьToolStripMenuItem.Name = "списокЗамовленьToolStripMenuItem";
-            this.списокЗамовленьToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.списокЗамовленьToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
             this.списокЗамовленьToolStripMenuItem.Text = "Список замовлень";
             this.списокЗамовленьToolStripMenuItem.Click += new System.EventHandler(this.списокЗамовленьToolStripMenuItem_Click);
             // 
             // історіяЗамовленьToolStripMenuItem
             // 
             this.історіяЗамовленьToolStripMenuItem.Name = "історіяЗамовленьToolStripMenuItem";
-            this.історіяЗамовленьToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.історіяЗамовленьToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
             this.історіяЗамовленьToolStripMenuItem.Text = "Історія замовлень";
             this.історіяЗамовленьToolStripMenuItem.Click += new System.EventHandler(this.історіяЗамовленьToolStripMenuItem_Click);
             // 
@@ -148,6 +148,21 @@
             this.списокФінансовихЗвітівToolStripMenuItem.Size = new System.Drawing.Size(267, 26);
             this.списокФінансовихЗвітівToolStripMenuItem.Text = "Список фінансових звітів";
             this.списокФінансовихЗвітівToolStripMenuItem.Click += new System.EventHandler(this.списокФінансовихЗвітівToolStripMenuItem_Click);
+            // 
+            // звітиToolStripMenuItem
+            // 
+            this.звітиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.формуванняЗвітівToolStripMenuItem});
+            this.звітиToolStripMenuItem.Name = "звітиToolStripMenuItem";
+            this.звітиToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
+            this.звітиToolStripMenuItem.Text = "Звіти";
+            // 
+            // формуванняЗвітівToolStripMenuItem
+            // 
+            this.формуванняЗвітівToolStripMenuItem.Name = "формуванняЗвітівToolStripMenuItem";
+            this.формуванняЗвітівToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.формуванняЗвітівToolStripMenuItem.Text = "Формування звітів";
+            this.формуванняЗвітівToolStripMenuItem.Click += new System.EventHandler(this.формуванняЗвітівToolStripMenuItem_Click);
             // 
             // monthCalendar1
             // 
@@ -171,20 +186,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(278, 246);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // звітиToolStripMenuItem
-            // 
-            this.звітиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.формуванняЗвітівToolStripMenuItem});
-            this.звітиToolStripMenuItem.Name = "звітиToolStripMenuItem";
-            this.звітиToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
-            this.звітиToolStripMenuItem.Text = "Звіти";
-            // 
-            // формуванняЗвітівToolStripMenuItem
-            // 
-            this.формуванняЗвітівToolStripMenuItem.Name = "формуванняЗвітівToolStripMenuItem";
-            this.формуванняЗвітівToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.формуванняЗвітівToolStripMenuItem.Text = "Формування звітів";
             // 
             // Form2
             // 

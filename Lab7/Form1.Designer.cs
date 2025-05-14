@@ -48,7 +48,7 @@
             // NameTextBox
             // 
             this.NameTextBox.Location = new System.Drawing.Point(708, 142);
-            this.NameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(255, 22);
             this.NameTextBox.TabIndex = 0;
@@ -98,7 +98,7 @@
             // 
             this.PasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.PasswordTextBox.Location = new System.Drawing.Point(708, 192);
-            this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(255, 26);
@@ -114,7 +114,7 @@
             this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.LoginButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.LoginButton.Location = new System.Drawing.Point(747, 245);
-            this.LoginButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LoginButton.Margin = new System.Windows.Forms.Padding(4);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(176, 53);
             this.LoginButton.TabIndex = 5;
@@ -126,7 +126,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.LightSlateGray;
             this.pictureBox1.Location = new System.Drawing.Point(-7, 121);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1687, 715);
             this.pictureBox1.TabIndex = 6;
@@ -137,7 +137,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.LightSlateGray;
             this.pictureBox2.Location = new System.Drawing.Point(-7, -7);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(1687, 43);
             this.pictureBox2.TabIndex = 7;
@@ -157,7 +157,7 @@
             this.Controls.Add(this.NameTextBox);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "АРМ директора комп’ютерного сервісного центру. Розробник Ілларіонов М.І. Усі прав" +
     "а захищені. 2025-2025";

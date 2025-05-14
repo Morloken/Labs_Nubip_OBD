@@ -17,5 +17,10 @@ C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\obj\Debug\Computer.ACB9
 C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.exe
 C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.pdb
 C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.Form_OrderHistorycs.resources
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\obj\Debug\Lab7.Reports.resources
 C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\obj\Debug\ComputerServiceCenter.csproj.Fody.CopyLocal.cache
 C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\obj\Debug\ComputerServiceCenter.csproj.Fody.RuntimeCopyLocal.cache
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\user1\source\repos\Morloken\Labs_Nubip_OBD\Lab7\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
