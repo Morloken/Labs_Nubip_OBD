@@ -15,8 +15,7 @@ namespace Lab7
         public static Form2 form2Instance;
         // Створюємо новий екземпляр Form_ListOfAvailableServices
         Form_ListOfAvailableServices formListOfAvailableServices = new Form_ListOfAvailableServices();
-        // Створюємо новий екземпляр Form_EditService
-        Form_EditService formEditService = new Form_EditService();
+        
 
         // Створюємо новий екземпляр Form_ListOfClients
         Form_ListOfClients formListOfClients = new Form_ListOfClients();
@@ -66,17 +65,10 @@ namespace Lab7
 
         private void редагуванняПослугToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Створення нового екземпляра форми редагування послуг
-            //Form_EditServices formEditServices = new Form_EditServices();
-            formEditService.Show();
-
-            // Приховуємо поточну форму (Form2)
-            this.Hide();
         }
 
         private void клієнтиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
         }
 
         private void списокКлієнтівToolStripMenuItem_Click(object sender, EventArgs e)
