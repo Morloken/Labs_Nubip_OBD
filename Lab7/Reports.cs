@@ -100,6 +100,11 @@ namespace Lab7
                 Excel.Workbook workbook = excelApp.Workbooks.Add(Type.Missing);
                 Excel.Worksheet worksheet = (Excel.Worksheet)workbook.Sheets[1];
                 worksheet.Name = "Звіт";
+                //Назва файлу
+
+                string fileName = $"Report_{DateTime.Now.ToString("yyyyMMdd_HHmmss")}.xlsx";
+                string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), fileName);
+
 
                 // Додаємо заголовки
                 for (int i = 1; i <= dataGridView1.Columns.Count; i++)
